@@ -1,9 +1,20 @@
-﻿@if (TempData["success"] != null)
+﻿@if (TempData["success"] != null || TempData["error"] != null)
 {
-    
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/toastr.js/toastr.min.js"></script>
+
+    @if (TempData["success"] != null)
+    {
+        <script>
+            toastr.success("@TempData["success"]");
+        </script>
+    }
+    @if (TempData["error"] != null)
+    {
+        <script>
+            toastr.error("@TempData["error"]");
+        </script>
+    }
+
 }
 
-@if (TempData["error"] != null)
-{
-
-}
