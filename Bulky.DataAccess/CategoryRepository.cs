@@ -23,10 +23,5 @@ namespace Bulky.DataAccess
         {
             _context.Categories.Update(category);
         }
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
-
     }
 }
