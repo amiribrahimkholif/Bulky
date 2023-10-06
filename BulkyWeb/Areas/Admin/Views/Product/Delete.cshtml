@@ -1,0 +1,58 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete Product";
+}
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3 ">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white">Delete Category</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-controller="Product" asp-action="Create">
+            <div class="form-floating my-3">
+                <input asp-for="Title" class="form-control border-0 shadow" disabled id="Title" placeholder="Title">
+                <label asp-for="Title"></label>
+            </div>
+            <div class="form-floating my-3">
+                <textarea asp-for="Description" class="form-control border-0 shadow" disabled id="Description" placeholder="Description"></textarea>
+                <label asp-for="Description"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="ISBN" class="form-control border-0 shadow" disabled id="ISBN" placeholder="ISBN">
+                <label asp-for="ISBN"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="Author" class="form-control border-0 shadow" disabled id="Author" placeholder="Author">
+                <label asp-for="Author"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="ListPrice" class="form-control border-0 shadow" disabled id="ListPrice" placeholder="List Price">
+                <label asp-for="ListPrice"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="Price" class="form-control border-0 shadow" disabled id="Price" placeholder="Price">
+                <label asp-for="Price"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="Price50" class="form-control border-0 shadow" disabled id="Price50" placeholder="Price50">
+                <label asp-for="Price50"></label>
+            </div>
+            <div class="form-floating my-3">
+                <input asp-for="Price100" class="form-control border-0 shadow" disabled id="Price100" placeholder="Price100">
+                <label asp-for="Price100"></label>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">Delete</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary form-control"> Back To List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
